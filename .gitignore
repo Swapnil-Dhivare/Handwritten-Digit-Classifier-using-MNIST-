@@ -1,0 +1,2 @@
+echo "model/data/mnist_train.csv" 
+echo "model/data/mnist_test.csv"
