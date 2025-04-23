@@ -20,6 +20,10 @@ def load_model():
         parent_dir = os.path.dirname(current_dir)
         model_path = os.path.join(parent_dir, "model", "model.h5")
 
+        if os.path.getsize(model_path) == 0:
+            st.error("Model file is empty.")
+            return None
+
         if not os.path.exists(model_path):
             st.error(f"Model file not found at: {model_path}")
             return None
@@ -34,12 +38,12 @@ def load_model():
 
 def main():
     st.set_page_config(
-        page_title="Handwritten Digit Classifier",
+        page_title="Handwritten Digit Classifier(0-9)",
         page_icon="✍️",
         layout="wide"
     )
 
-    st.title("Handwritten Digit Classification")
+    st.title("Handwritten Digit Classification(0-9)")
 
     col1, col2 = st.columns([4, 1])
 
