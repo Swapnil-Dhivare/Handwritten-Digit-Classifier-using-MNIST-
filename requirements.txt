@@ -1,7 +1,7 @@
 
-numpy==2.2.5
-opencv_python==4.11.0.86
-Pillow==11.2.1
+numpy
+opencv_python
+Pillow
 streamlit==1.44.1
 streamlit_drawable_canvas==0.9.3
 tensorflow==2.19.0
