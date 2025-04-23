@@ -5,3 +5,4 @@ Pillow
 streamlit==1.44.1
 streamlit_drawable_canvas==0.9.3
 tensorflow==2.19.0
+
