@@ -20,12 +20,12 @@ def load_model():
         parent_dir = os.path.dirname(current_dir)
         model_path = os.path.join(parent_dir, "model", "model.h5")
 
-        if os.path.getsize(model_path) == 0:
-            st.error("Model file is empty.")
-            return None
-
         if not os.path.exists(model_path):
             st.error(f"Model file not found at: {model_path}")
+            return None
+        
+        if os.path.getsize(model_path) == 0:
+            st.error("Model file is empty.")
             return None
 
         model = tf.keras.models.load_model(model_path)
